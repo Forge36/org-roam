@@ -142,4 +142,14 @@ together with the method symbol as a cons cell. For example:
           (const :tag "rg" rg)
           (const :tag "elisp" nil)))
 
+(defcustom org-roam-directory nil
+  "The directory that will contain your notes. Org-roam will search
+recursively within for notes. This variable needs to be set before any
+calls to Org-roam functions."
+  :group 'org-roam
+  :type 'string)
+
+(defvar org-roam-node-point nil
+  "Stores current capture node.")
+
 (provide 'org-roam-lib)
