@@ -98,6 +98,9 @@
   (require 'subr-x))
 
 ;;; Library
+
+(declare-function org-roam-descendant-of-p "org-roam-utils")
+
 (defun org-roam-file-p (&optional file)
   "Return t if FILE is an Org-roam file, nil otherwise.
 If FILE is not specified, use the current buffer's file-path.
