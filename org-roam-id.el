@@ -31,6 +31,7 @@
 ;;
 ;;; Code:
 (require 'org-id)
+(require 'org-roam-lib)
 
 (defun org-roam-id-at-point ()
   "Return the ID at point, if any.
