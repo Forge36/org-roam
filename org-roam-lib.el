@@ -36,6 +36,9 @@
 ;;; Code:
 (require 'org-attach)                   ; To set `org-attach-id-dir'
 
+;;; Lib:
+(declare-function org-roam-list-files "org-roam")
+
 ;;; Options:
 (defgroup org-roam nil
   "A database abstraction layer for Org-mode."
@@ -87,7 +90,8 @@ responsibility to ensure that."
   :group 'org-roam)
 
 (defcustom org-roam-file-exclude-regexp (list org-attach-id-dir)
-  "Files matching this regular expression or list of regular expressions are excluded from the Org-roam."
+  "Files matching this regular expression or list of regular expressions
+are excluded from the Org-roam."
   :type '(choice
           (repeat
            (string :tag "Regular expression matching files to ignore"))
